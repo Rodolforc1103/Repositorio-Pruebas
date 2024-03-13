@@ -4,13 +4,13 @@ pipeline {
         stage('DELETION') { 
             steps {
                 echo '--REMOVING REPOSITORY IF ALREADY EXIST --'
-                sh "sudo rm -rf helloWordNodejs"
+                sh "sudo rm -rf Repositorio-Pruebas.git"
             }
         }
        stage('CLONE') { 
             steps {
                 echo '--CLONE STAGE EXECUTION ---'
-    sh "git clone https://github.com/jatinnandwani/helloWordNodejs.git"
+    sh "git clone https://github.com/Rodolforc1103/Repositorio-Pruebas.git"
             }
         }
         stage('TEST1') { 
@@ -26,7 +26,7 @@ pipeline {
         stage('BUILD') { 
             steps {
     echo '--BUILD STAGE EXECUTION --'
-    sh "node helloWordNodejs/index.js"
+    sh "node Repositorio-Pruebas.git"
             }
         }
   stage('DEPLOY') { 
